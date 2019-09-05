@@ -201,10 +201,9 @@ h1 {
   transition: all 0.5s ease-in;
 }
 
-.portrait {
+.photo {
   width: 250px;
   height: 250px;
-  background: url(https://resizeimage.net/mypic/h9pzAVTTzomrFCoG/f2F27/1393345_616111848440623_890306.jpg);
   border-radius: 50%;
   border: solid 3px #eece1a;
   clip-path: circle(125px at center);
@@ -315,7 +314,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .boxes div {
@@ -330,10 +329,13 @@ h1 {
   padding: 0.5rem 1.5rem;
   color: #eece1a;
 }
+.boxes a:hover {
+  color: #eece1a;
+}
 
 /*Button Style Work page*/
 .btn {
-  display: block;
+  display: inline-block;
   padding: 0.5rem;
   margin-bottom: 0.3rem;
   border: 0;
@@ -397,10 +399,12 @@ h1 {
   main {
     align-items: center;
     text-align: center;
+    justify-content: center;
   }
   .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
+    font-size: 3rem;
   }
 
   ul.show.menu-nav,
@@ -437,15 +441,18 @@ h1 {
     height: 25vh;
     transform: translate3d(100%, 0, 0);
   }
-  .portrait {
-    background: url(https://resizeimage.net/mypic/h9pzAVTTzomrFCoG/f2F27/1393345_616111848440623_890306.jpg);
+  .photo {
     z-index: 1;
     border-radius: 50%;
     border: solid 3px #eece1a;
-    clip-path: circle(75px at center);
+    height: 120px;
+    width: 120px;
+    clip-path: circle(60px at center);
   }
 
   .about-info {
+    display: grid;
+    justify-content: center;
     grid-template-areas:
       "bioimage"
       "bio"
@@ -473,12 +480,34 @@ h1 {
     width: 100%;
     text-align: center;
   }
+
+  #contact {
+    overflow: hidden;
+  }
+
+  .boxes div {
+    font-size: 1rem;
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25rem;
+  }
 }
 
 /*Media Query Large Desktop*/
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25rem;
   }
 }
 
